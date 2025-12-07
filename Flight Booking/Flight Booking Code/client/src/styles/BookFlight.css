@@ -1,0 +1,140 @@
+/* MAIN PAGE CONTAINER */
+.BookFlightPage {
+    width: 100%;
+    height: fit-content;
+    padding-top: 15vh;
+    padding-bottom: 5vh;
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(135deg, #ffffff, #d9c2ff);
+    animation: fadeSlide 1s ease;
+}
+
+/* CONTENT BOX */
+.BookingFlightPageContainer {
+    width: 44%;
+    background: rgba(255, 255, 255, 0.65);
+    
+    padding: 2vh 2%;
+    border-radius: 0.8rem;
+
+    box-shadow: 0 8px 25px rgba(80, 0, 180, 0.15);
+    animation: popIn 0.8s ease;
+}
+
+/* TITLE */
+.BookingFlightPageContainer h2 {
+    margin: 0 0 5vh 0;
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #4b0082;
+}
+
+/* TEXT */
+.BookingFlightPageContainer p {
+    margin: 0 0 5px 0;
+    color: #3a0468;
+    font-weight: 500;
+}
+
+.BookingFlightPageContainer p b {
+    font-weight: 700;
+    color: #5a00c2;
+}
+
+/* GRID LAYOUT */
+.BookingFlightPageContainer span {
+    display: grid;
+    grid-template-columns: 64% 33%;
+    gap: 3%;
+}
+
+.BookingFlightPageContainer .span3 {
+    display: grid;
+    grid-template-columns: 31.3% 31.3% 31.3%;
+    gap: 3%;
+}
+
+/* BUTTON */
+.BookingFlightPageContainer button {
+    width: 30%;
+    margin-left: 35%;
+    margin-top: 25px;
+    height: 45px;
+
+    background: linear-gradient(135deg, #7c2eff, #c89bff);
+    border: none;
+    border-radius: 8px;
+
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s ease;
+    animation: bounceIn 0.9s ease;
+}
+
+.BookingFlightPageContainer button:hover {
+    transform: scale(1.06);
+    box-shadow: 0 0 14px rgba(124, 46, 255, 0.7);
+}
+
+/* LIST ITEMS */
+.BookingFlightPageContainer li {
+    font-size: 0.85rem;
+    color: #3a0468;
+    margin-left: 10px;
+}
+
+/* NEW PASSENGER TITLE */
+.new-passenger h4 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #4b0082;
+    margin-top: 20px;
+}
+
+/* PASSENGER INPUT GRID */
+.new-passenger-inputs {
+    display: grid;
+    grid-template-columns: 67% 30%;
+    gap: 3%;
+}
+
+/* SELECT STYLE */
+.new-passenger-inputs select {
+    padding-left: 12px;
+    height: 40px;
+
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.75);
+    border: 1px solid rgba(124, 46, 255, 0.3);
+
+    color: #000;
+    font-weight: 500;
+    transition: 0.3s ease;
+}
+
+/* FOCUS EFFECT */
+.new-passenger-inputs select:focus {
+    border-color: #7c2eff;
+    box-shadow: 0 0 10px rgba(124, 46, 255, 0.6);
+    transform: scale(1.03);
+}
+
+/* ANIMATIONS */
+@keyframes fadeSlide {
+    from { opacity: 0; transform: translateY(40px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes popIn {
+    0%   { opacity: 0; transform: scale(0.9); }
+    100% { opacity: 1; transform: scale(1); }
+}
+
+@keyframes bounceIn {
+    0% { transform: scale(0.85); opacity: 0; }
+    70% { transform: scale(1.07); opacity: 1; }
+    100% { transform: scale(1); }
+}

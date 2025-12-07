@@ -1,0 +1,101 @@
+/* Fade & Slide Animation */
+@keyframes fadeSlide {
+    0% {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.allFlightsPage {
+    margin: 13vh 0 0 0;
+    height: fit-content;
+    width: 100%;
+    animation: fadeSlide 0.8s ease-in-out;
+}
+
+.allFlightsPage h1 {
+    color: #6b20c6;
+    margin-left: 3vw;
+    font-weight: 700;
+}
+
+/* GRID */
+.allFlights {
+    margin-top: 5vh;
+    width: 90%;
+    margin-left: 5%;
+    height: fit-content;
+    padding-bottom: 5vh;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    row-gap: 30px;
+}
+
+/* FLIGHT CARD */
+.allFlights .allFlights-Flight {
+    background: linear-gradient(135deg, #ffffff 0%, #f5e9ff 100%);
+    width: 90%;
+    margin-left: 5%;
+    padding: 3vh 2vw;
+
+    border-radius: 0.9rem;
+    box-shadow: 0px 6px 15px rgba(120, 0, 255, 0.12);
+
+    animation: fadeSlide 0.8s ease-in-out;
+    transition: all 0.3s ease;
+}
+
+.allFlights .allFlights-Flight:hover {
+    transform: translateY(-6px);
+    box-shadow: 0px 12px 25px rgba(120, 0, 255, 0.25);
+}
+
+/* FLIGHT TOP INFO ROW */
+.allFlights .allFlights-Flight span {
+    display: flex;
+    gap: 25px;
+}
+
+/* TEXT */
+.allFlights .allFlights-Flight p {
+    margin: 0 0 3px 0;
+    color: #5a2aa8;
+    font-weight: 500;
+}
+
+.allFlights .allFlights-Flight p b {
+    font-weight: 700;
+}
+
+.allFlights .allFlights-Flight ol {
+    margin: 0;
+    font-size: 0.85rem;
+    color: #6232b6;
+}
+
+.allFlights .allFlights-Flight ol b {
+    font-weight: 600;
+}
+
+/* BUTTON */
+.allFlights .allFlights-Flight button {
+    margin-top: 15px;
+    padding: 10px 25px;
+    border-radius: 0.5rem;
+    border: none;
+    cursor: pointer;
+    background: linear-gradient(135deg, #7f2aff, #b47aff);
+    color: white;
+    font-weight: 600;
+
+    transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+.allFlights .allFlights-Flight button:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+}

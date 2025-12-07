@@ -1,0 +1,144 @@
+/* Smooth fade-in animation */
+@keyframes fadeUp {
+    0% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.admin-page {
+    margin-top: 15vh;
+    height: fit-content;
+    animation: fadeUp 0.8s ease-in-out;
+}
+
+/* CARDS GRID */
+.admin-page-cards {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+}
+
+/* SINGLE CARD */
+.admin-card {
+    padding: 3vh 2vw;
+    text-align: center;
+    width: 20vw;
+    height: 150px;
+
+    background: linear-gradient(135deg, #ffffff 0%, #f3e8ff 100%);
+    border-radius: 1rem;
+    border: none;
+
+    box-shadow: 0px 4px 10px rgba(120, 0, 255, 0.15);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+    transition: all 0.35s ease;
+    animation: fadeUp 0.8s ease-in-out;
+}
+
+.admin-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 10px 25px rgba(120, 0, 255, 0.3);
+}
+
+.admin-card h4 {
+    margin: 0;
+    color: #6500b9;
+    font-weight: 700;
+}
+
+.admin-card p {
+    margin: 0;
+    color: #7a46b3;
+}
+
+/* REQUESTS CONTAINER */
+.admin-requests-container {
+    margin: 10vh 0 3vh 3vw;
+    border: 1px solid #c4a4ff;
+    width: 70%;
+    padding: 2vh 2vw;
+    background: #ffffffdd;
+    border-radius: 1rem;
+    
+    animation: fadeUp 0.8s ease-in-out;
+}
+
+.admin-requests-container h3 {
+    color: #5a00a8;
+}
+
+/* REQUEST LIST */
+.admin-requests {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 4vh;
+    height: 30vh;
+    overflow-y: scroll;
+    margin-left: 2vw;
+}
+
+/* SINGLE REQUEST CARD */
+.admin-request {
+    display: flex;
+    align-items: center;
+    gap: 45px;
+
+    background: linear-gradient(135deg, #faf5ff 0%, #ffffff 100%);
+    border: 1px solid #e0c7ff;
+    padding: 15px 25px;
+    margin-right: 10px;
+    border-radius: 0.8rem;
+
+    transition: all 0.3s ease;
+}
+.admin-request:hover {
+    transform: translateX(5px);
+    box-shadow: 0px 6px 18px rgba(140, 0, 255, 0.2);
+}
+
+.admin-request span {
+    display: flex;
+    flex-direction: column;
+}
+
+.admin-request span b {
+    font-weight: 700;
+    color: #5f2aa8;
+}
+
+/* Request Buttons */
+.admin-request-actions {
+    display: flex;
+    gap: 30px;
+}
+
+.admin-request-actions button {
+    width: 7rem;
+    padding: 8px 0;
+    border-radius: 0.5rem;
+    border: none;
+    cursor: pointer;
+
+    background: linear-gradient(135deg, #7f2aff, #b47aff);
+    color: white;
+    font-weight: 600;
+
+    transition: opacity 0.3s ease, transform 0.2s ease;
+}
+
+.admin-request-actions button:hover {
+    opacity: 0.9;
+    transform: scale(1.05);
+}
